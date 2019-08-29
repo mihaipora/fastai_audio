@@ -61,13 +61,13 @@ class AudioDataBunch(DataBunch):
 
             return cls(*dataloaders, path=path, collate_fn=pad_collate1d, tfms=tfms)"""
     
-    def show_batch(self, rows:int=5, ds_type:DatasetType=DatasetType.Train, **kwargs):
+    """def show_batch(self, rows:int=5, ds_type:DatasetType=DatasetType.Train, **kwargs):
         dl = self.dl(ds_type)
         ds = dl.dl.dataset
         idx = np.random.choice(len(ds), size=rows, replace=False)
         batch = ds[idx]
         xs, ys = batch.x, batch.y
-        self.train_ds.show_xys(xs, ys, **kwargs)
+        self.train_ds.show_xys(xs, ys, **kwargs)"""
 
 
 class AudioItemList(ItemList):
