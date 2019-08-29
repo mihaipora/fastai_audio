@@ -102,5 +102,5 @@ class AudioItemList(ItemList):
 
     def show_xys(self, xs, ys, figsize=None, **kwargs):
         for x, y in zip(xs, ys):
-            x.show(title=y, **kwargs)
+            x.show(title="y", **kwargs)
 
