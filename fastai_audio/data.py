@@ -33,7 +33,7 @@ class AudioDataBunch(DataBunch):
     def create(cls, train_ds, valid_ds, test_ds=None, path='.',
                bs=64, equal_lengths=True, length_col=None, tfms=None, **kwargs):
         if equal_lengths:
-            return super().create(train_ds, valid_ds, test_ds=test_ds, path=path,
+            return super().create(train_ds=train_ds, valid_ds=valid_ds, test_ds=test_ds, path=path,
                                   bs=bs, dl_tfms=tfms, **kwargs)
         else:
             datasets = super()._init_ds(train_ds, valid_ds, test_ds)
